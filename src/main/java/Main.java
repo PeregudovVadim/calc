@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,6 +27,22 @@ public class Main {
         put("C", 100);
     }};
     private static boolean isRoman;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String input;
+
+        while (scanner.hasNextLine()) {
+            input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("EXIT")) {
+                break;
+            }
+
+            System.out.println(calc(input));
+        }
+    }
 
     public static String calc(String input) {
         try {
